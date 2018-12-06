@@ -7,7 +7,6 @@ public class Map
     // class variables
     private int size_x;
     private int size_y;
-
     private Dictionary<string, int> floor = new Dictionary<string, int>();
 
     public Map(int size_x, int size_y, bool random_size = false)
@@ -26,21 +25,25 @@ public class Map
         floor = prepareMap();
     }
 
+    // read the size of x
     public int getSizeX()
     {
         return size_x;
     }
 
+    // read the size of y
     public int getSizeY()
     {
         return size_y;
     }
 
+    // read the map
     public Dictionary<string, int> getFloor()
     {
         return floor;
     }
 
+    // fill the map with values (everything will be filled with 0)
     private Dictionary<string, int> prepareMap()
     {
         for(int i = 0; i < size_x; i++)

@@ -4,11 +4,18 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: tile_corridor_wall_5
+    100004: tile_corridor_wall_5_COLLIDER
     400000: //RootNode
+    400002: tile_corridor_wall_5
+    400004: tile_corridor_wall_5_COLLIDER
     2100000: Material
-    2300000: //RootNode
-    3300000: //RootNode
+    2300000: tile_corridor_wall_5
+    2300002: tile_corridor_wall_5_COLLIDER
+    3300000: tile_corridor_wall_5
+    3300002: tile_corridor_wall_5_COLLIDER
     4300000: tile_corridor_wall_5
+    4300002: tile_corridor_wall_5_COLLIDER
   externalObjects: {}
   materials:
     importMaterials: 1
