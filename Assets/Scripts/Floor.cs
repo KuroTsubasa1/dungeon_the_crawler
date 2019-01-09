@@ -33,9 +33,12 @@ public class Floor {
 
         this.test = new int[size_x, size_y];
 
+        Debug.Log(this.test.Length);
+
+
         for(int i = 0; i < this.size_x - 1; i++)
         {
-           for(int ii = 0; ii < this.size_y -1; i++)
+           for(int ii = 0; ii < this.size_y -1; ii++)
             {
                 Debug.Log("-----");
                 Debug.Log(i);
@@ -48,7 +51,7 @@ public class Floor {
 
         for (int i = 0; i < size_x -1; i++)
         {
-            for (int ii = 0; ii < size_y -1; i++)
+            for (int ii = 0; ii < size_y -1; ii++)
             {
                  Debug.Log(this.test[i, ii]);
             }
