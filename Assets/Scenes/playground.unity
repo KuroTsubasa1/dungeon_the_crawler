@@ -382,8 +382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de83531afc6b4140abe5854091127d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map_size_x: 100
-  map_size_y: 100
+  map_size_x: 50
+  map_size_y: 50
   room_count: 1
 --- !u!4 &1653923223
 Transform:

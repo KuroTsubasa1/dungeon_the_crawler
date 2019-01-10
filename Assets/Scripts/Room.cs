@@ -8,7 +8,7 @@ public class Room{
     private int size_x;
     private int size_y;
 
-    private string startpoint;
+    private List<int> startpoint;
     private int floor_x;
     private int floor_y;
 
@@ -19,12 +19,34 @@ public class Room{
         this.startpoint = getRandomStartPoint();
     }
 
-    public string getRandomStartPoint()
+    private List<int> getRandomStartPoint()
     {
-        string x = Random.Range(0, floor_x).ToString();
-        string y = Random.Range(0, floor_y).ToString();
-        return x +" " + y;
+        List<int> cord = new List<int>();
+
+        cord.Add(Random.Range(0, floor_x));
+        cord.Add(Random.Range(0, floor_y));
+
+        return cord;
     }
+
+    private void validateRoom()
+    {
+
+    }
+
+    private void insertRoom(Floor floor)
+    {
+
+    }
+
+
+    // getter setter
+
+    public List<int> getStartpoint()
+    {
+        return this.startpoint;
+    }
+
 
 
 

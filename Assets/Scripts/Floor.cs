@@ -8,7 +8,7 @@ public class Floor {
     // class variables
     private int size_x;
     private int size_y;
-    int[,] test = new int[0, 0];
+    int[,] tiles  = new int[0, 0];
 
     private Dictionary<string, int> floor = new Dictionary<string, int>();
 
@@ -25,26 +25,25 @@ public class Floor {
             this.size_y = Random.Range(50, 100);
         }
 
-        //test
-
+        /*
         Debug.Log("-----");
         Debug.Log(this.size_x);
         Debug.Log(this.size_y);
+        */
 
-        this.test = new int[size_x, size_y];
-
-        Debug.Log(this.test.Length);
-
+        this.tiles = new int[size_x, size_y];
 
         for(int i = 0; i < this.size_x - 1; i++)
         {
            for(int ii = 0; ii < this.size_y -1; ii++)
             {
+                /*
                 Debug.Log("-----");
                 Debug.Log(i);
                 Debug.Log(ii);
+                */
 
-                this.test[i, ii] = 99;
+                this.tiles[i, ii] = 99;
             }
         }
 
@@ -53,7 +52,7 @@ public class Floor {
         {
             for (int ii = 0; ii < size_y -1; ii++)
             {
-                 Debug.Log(this.test[i, ii]);
+                // Debug.Log(this.tiles[i, ii]);
             }
         }
 
@@ -93,6 +92,10 @@ public class Floor {
         }
 
         return floor;
+    }
 
+    public int getTile(int x, int y)
+    {
+        return this.tiles[x, y];
     }
 }

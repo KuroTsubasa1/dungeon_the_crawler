@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class InitDungeon : MonoBehaviour {
 
-    public int map_size_x = 100;
-    public int map_size_y = 100;
+    public int map_size_x = 10;
+    public int map_size_y = 10;
 
     public int room_count =  1;
 
@@ -22,7 +22,7 @@ public class InitDungeon : MonoBehaviour {
         Debug.Log("Initialization Floor");
         Debug.Log(" ");
 
-        Floor floor = new Floor(100, 100);
+        Floor floor = new Floor(map_size_x, map_size_y);
         Debug.Log(" ");
 
         Debug.Log("Initialization Room");
@@ -38,10 +38,33 @@ public class InitDungeon : MonoBehaviour {
             Debug.Log(room.getRandomStartPoint());
         }
 
+
+
+        Debug.Log("Test");
+        // viz map
+
+        VisualizeMap(floor);
+
     }
 	// Update is called once per frame
 	void Update () {
 		
 	}
 
+    public void VisualizeMap(Floor floor)
+    {
+
+        string row = "";
+
+        for (int i = 0; i < map_size_x -1; i++)
+        { 
+            for (int ii = 0; ii < map_size_y - 1; ii++)
+            {
+                row += " " + floor.getTile(i, ii) ;
+            }
+
+            Debug.Log(row);
+        row = "";
+        }
+    }
 }
