@@ -35,7 +35,7 @@ public class InitDungeon : MonoBehaviour {
 
         foreach(Room room in rooms)
         {
-            Debug.Log(room.getRandomStartPoint());
+            Debug.Log(room.getStartpoint());
         }
 
 
@@ -53,18 +53,33 @@ public class InitDungeon : MonoBehaviour {
 
     public void VisualizeMap(Floor floor)
     {
+        bool full = false;
 
-        string row = "";
+        int ix = 0;
+        int iy = 0;
 
-        for (int i = 0; i < map_size_x -1; i++)
-        { 
-            for (int ii = 0; ii < map_size_y - 1; ii++)
+        int size_x = floor.getFloorSize()[0];
+        int size_y = floor.getFloorSize()[1];
+
+        do
+        {
+            if (ix < size_x - 1 && iy < size_y - 1)
             {
-                row += " " + floor.getTile(i, ii) ;
+                //Tilemanager.Add(new Tile(ix, iy, 99, 0));
+                //Debug();
+
+                if (ix == size_x - 1)
+                {
+                    if (iy == size_y - 1)
+                    {
+                        full = true;
+                    }
+                    ix = 0;
+                    iy++;
+                }
+                ix++;
             }
 
-            Debug.Log(row);
-        row = "";
-        }
+        } while (full);
     }
 }
