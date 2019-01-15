@@ -12,6 +12,8 @@ public class InitDungeon : MonoBehaviour {
 
     private List<Room> rooms = new List<Room>();
 
+   
+
     // Use this for initialization
     void Start()
     {
@@ -38,48 +40,31 @@ public class InitDungeon : MonoBehaviour {
             Debug.Log(room.getStartpoint());
         }
 
-
-
-        Debug.Log("Test");
         // viz map
 
-        VisualizeMap(floor);
+        VisualizeMap(floor.getFloor());
 
     }
+
 	// Update is called once per frame
 	void Update () {
 		
 	}
 
-    public void VisualizeMap(Floor floor)
+    public void VisualizeMap(Tile[,] tiles)
     {
-        bool full = false;
 
-        int ix = 0;
-        int iy = 0;
-
-        int size_x = floor.getFloorSize()[0];
-        int size_y = floor.getFloorSize()[1];
-
-        do
+        for (int i = 0; i < map_size_x - 1; i++)
         {
-            if (ix < size_x - 1 && iy < size_y - 1)
-            {
-                //Tilemanager.Add(new Tile(ix, iy, 99, 0));
-                //Debug();
-
-                if (ix == size_x - 1)
-                {
-                    if (iy == size_y - 1)
-                    {
-                        full = true;
-                    }
-                    ix = 0;
-                    iy++;
-                }
-                ix++;
+            string row = "";
+            for (int ii = 0; ii < map_size_y - 1; ii++)
+            { 
+                row += tiles[i, ii].floorTileID.ToString();
             }
 
-        } while (full);
+            Debug.Log(row);
+
+        }
+
     }
 }

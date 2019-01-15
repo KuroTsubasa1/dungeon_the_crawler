@@ -8,9 +8,8 @@ public class Floor {
     // class variables
     private int size_x;
     private int size_y;
-    List<Tile> Tilemanager = new List<Tile>();
+    private Tile[,] floor = new Tile[0, 0];
 
-    private Dictionary<string, int> floor = new Dictionary<string, int>();
 
     public Floor(int size_x, int size_y, bool random_size = false)
     {
@@ -31,45 +30,24 @@ public class Floor {
         Debug.Log(this.size_y);
         */
 
-        bool full = false;
+        this.floor = new Tile[size_x, size_y];
 
-        int ix = 0;
-        int iy = 0; 
-
-        do
+        for (int i = 0; i < size_x ; i++)
         {
-            if(ix < size_x -1 && iy < size_y -1)
+            for (int ii = 0; ii < size_y ; ii++)
             {
-                Tilemanager.Add(new Tile(ix, iy, 99, 0));
-                
-                if(ix == size_x - 1)
-                {
-                    if (iy == size_y - 1)
-                    {
-                        full = true;
-                    }
-                    ix = 0;
-                    iy++;
-                }
-                ix++;
+                this.floor[i, ii] = new Tile(i, ii, 99, 0);
             }
 
-        } while (full);
-
+        }
     }
 
-    public List<int> getFloorSize()
+    public Tile[,] getFloor()
     {
-        List<int> cords = new List<int>();
-        cords.Add(size_x);
-        cords.Add(size_y);
-
-        return cords;
-    }
-
-    public List<Tile> getTileManager()
-    {
-        return this.Tilemanager;
+        return this.floor;
     }
 
 }
+
+    
+
