@@ -36,7 +36,7 @@ public class Floor {
         {
             for (int ii = 0; ii < size_y ; ii++)
             {
-                this.floor[i, ii] = new Tile(i, ii, 99, 0);
+                this.floor[i, ii] = new Tile(i, ii, 0, 0);
             }
 
         }
@@ -45,6 +45,15 @@ public class Floor {
     public Tile[,] getFloor()
     {
         return this.floor;
+    }
+
+
+    public List<int>getFloorDimensions()
+    {
+        List<int> dimensions = new List<int>();
+        dimensions.Add(this.size_x);
+        dimensions.Add(this.size_y);
+        return dimensions;
     }
 
 }
