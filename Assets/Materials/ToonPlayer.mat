@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ToonCornflower
+  m_Name: ToonPlayer
   m_Shader: {fileID: 4800000, guid: 99bb36e9d2c76874e8e8e2baed6debca, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

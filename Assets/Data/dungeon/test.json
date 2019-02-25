@@ -1,0 +1,17 @@
+{
+    "dungeonName": "Test Dungeon",
+    "floorCount": 5,
+    "enemyList": {
+        "0": 1,
+        "1": 1
+    },
+    "itemList": {
+        "0": 1,
+        "1": 1
+    },
+    "dungeonTheme": 1,
+    "specialFloors": {
+        "0": 1,
+        "1": 1
+    }
+}
